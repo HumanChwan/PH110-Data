@@ -38,6 +38,8 @@ int main() {
     charging.calculate();
     discharging.calculate();
 
+    std::cout << std::setprecision(3);
+
     std::cout << "\nCharging:\t\t";
     charging.print();
 
