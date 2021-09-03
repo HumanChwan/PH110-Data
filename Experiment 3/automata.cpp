@@ -26,6 +26,11 @@ int main(int argc, char** argv) {
   for (int i = 0; i < N; ++i) {
     std::cin >> data[i].i >> data[i].v1 >> data[i].v2 >> data[i].v3 >>
         data[i].v4;
+    data[i].v1 = std::abs(data[i].v1);
+    data[i].v2 = std::abs(data[i].v2);
+    data[i].v3 = std::abs(data[i].v3);
+    data[i].v4 = std::abs(data[i].v4);
+
     data[i].vh =
         (data[i].i + data[i].v1 + data[i].v2 + data[i].v3 + data[i].v4) / 4.0f;
   }
