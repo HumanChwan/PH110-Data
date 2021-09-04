@@ -3,7 +3,6 @@
 #include <string>
 
 struct Data {
-  static int n;
   float i, v1, v2, v3, v4;
   float vh;
 };
@@ -13,8 +12,9 @@ int main(int argc, char** argv) {
   freopen("log.txt", "w", stdout);
 
   int N;
-  if (argc < 2) {
+  if (argc < 1) {
     std::cout << "error";
+    return 0;
   } else {
     std::string N_as_string = argv[1];
     N = std::stoi(N_as_string);
@@ -31,8 +31,7 @@ int main(int argc, char** argv) {
     data[i].v3 = std::abs(data[i].v3);
     data[i].v4 = std::abs(data[i].v4);
 
-    data[i].vh =
-        (data[i].i + data[i].v1 + data[i].v2 + data[i].v3 + data[i].v4) / 4.0f;
+    data[i].vh = (data[i].v1 + data[i].v2 + data[i].v3 + data[i].v4) / 4.0f;
   }
 
   float sigmaX = 0.0f;
@@ -57,7 +56,5 @@ int main(int argc, char** argv) {
   for (int i = 0; i < N; ++i) {
     std::cout << data[i].i << "\t\t" << (data[i].vh) << "\n";
   }
-
-  std::cout << "\n";
-  std::cout << "a: " << a << "\nb: " << b;
+  std::cout << "\na: " << a << "\nb: " << b;
 }
