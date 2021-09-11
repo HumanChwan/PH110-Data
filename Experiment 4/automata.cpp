@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
         set[i].set(tuple[i * 3].freq, mean);
     }
 
-    std::cout << std::fixed << std::setprecision(2);
+    std::cout << std::fixed << std::setprecision(1);
     std::cout << "S.No\tfreq(v)\t\t(1/freq)(1/v)\t\tl1\t\t\tl2\t\t\t(l2-l1 = "
                  "wav/2)\t\twav\t\t\tmean_wav\n\n";
     for (int i = 0; i < N / 3; ++i) {
@@ -80,7 +80,7 @@ int main(int argc, char* argv[]) {
             std::cout << set[i].freq << "\t\t\t";
             std::cout << std::setprecision(2) << std::scientific << set[i].x
                       << "\t\t\t\t";
-            std::cout << std::fixed << std::setprecision(2);
+            std::cout << std::fixed << std::setprecision(1);
             std::cout << tuple[i * 3 + j].l1 << "\t\t" << tuple[i * 3 + j].l2
                       << "\t\t\t\t" << tuple[i * 3 + j].diff << "\t\t\t\t\t"
                       << tuple[i * 3 + j].wavelen;
