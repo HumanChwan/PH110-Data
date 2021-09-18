@@ -81,7 +81,7 @@ int main() {
     std::cout << "\nEquation: \n";
     std::cout << "y = " << linear_reg.a << "x + " << linear_reg.b << "\n";
 
-    std::cout << "\nK: " << (L * L + B * B) / 12.0f << " m^2";
+    std::cout << "\nK^2: " << (L * L + B * B) / 12.0f << " m^2";
     std::cout << "\ng: " << (4.0f * PI * PI) / (linear_reg.a * 100.0f)
               << " m/s^2";
 
