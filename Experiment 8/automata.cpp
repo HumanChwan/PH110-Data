@@ -34,6 +34,7 @@ struct data {
 };
 
 int main() {
+    std::cout << "Hello World";
     std::cout << std::fixed << std::setprecision(2);
     data RingData[RINGS];
     for (int i = 0; i < RINGS; ++i) {
